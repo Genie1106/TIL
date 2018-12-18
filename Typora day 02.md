@@ -23,11 +23,11 @@
 * git add . : 현재 폴더의 변경사항을 commit하기 위해 준비
 * git commit -m 'file_name'  : commit 변경 사항 저장
 * git push -u origin master : remote로 등록된 원격 저장소
-  * 이후에는  git push 만 입력해도 동작
+  * 이후에는  git push 만 입력해도 동작g
 
 
 
 * Markdown 기록할 것. 
 
   * Typora or VSCode
-  * Github Student Developer Pack
+  * Github Student Developer Packda
