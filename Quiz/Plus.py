@@ -1,10 +1,6 @@
-a=[]
 n = int(input())
 
 for i in range(1,n+1):
-    a.append(i)
-
-a.reverse()
-
-for a in n:
-    print(a)
+    cnt = 1
+    for a in range(1,cnt+1):
+        print('*')
