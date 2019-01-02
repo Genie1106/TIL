@@ -10,14 +10,11 @@
 # 입력으로 주어진 단어를 열 개씩 끊어서 한 줄에 하나씩 출력한다. 단어의 길이가 10의 배수가 아닌 경우에는 마지막 줄에는 10개 미만의 글자만 출력할 수도 있다.
 
 N = input()
-A=int(len(N)/10)
+Num = len(N)
+A = Num//10
 
-count = 0
-
-for i in range(0,A):
-    if count<=10:
-        print(N[i])
-        count = count+1
-
-
-
+for i in range(A):
+    a = 10*i 
+    b = a+10
+    print(N[a:b])
+print(N[b:Num])
