@@ -12,9 +12,10 @@
 N = input()
 Num = len(N)
 A = Num//10
+b=0
 
 for i in range(A):
-    a = 10*i 
+    a = i*10 
     b = a+10
     print(N[a:b])
 print(N[b:Num])
