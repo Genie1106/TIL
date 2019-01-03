@@ -18,8 +18,6 @@ for i in range(0,N):
     else:
         high = S[i]
 
-print(high)
-
 New = []
 for i in range(0,N):
     New.append(S[i]/high*100)
