@@ -4,11 +4,13 @@ blank = " "
 star = "*"
 
 half = int((N-1)/2)
-print(half)
+
 print(half*blank+star)
-for i in range(1,):
-    
-    print((half-i)*blank + star + blank*(i+1) + star)
+
+for i in range(1,half+1):
+    a = half - i
+    b = int(N-2-(half/2-1)*2)
+    print(a*blank + star + blank*b + star)
 
 # print(i*blank+star)
 # print((i-1)*blank+star+blank*1+star)
