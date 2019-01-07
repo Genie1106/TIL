@@ -12,6 +12,8 @@
 
 T = int(input())
 test = []
+list1=[1,3,5,7,8,10,12]
+list2=[4,6,9,11]
 
 for i in range(T):
     test.append(input())
@@ -19,17 +21,21 @@ for i in range(T):
 for i in range(T):
     month = int(test[i][4])*10+int(test[i][5])
     date = int(test[i][6])*10+int(test[i][7])
-    print(month,date)
-    if month == 1 or 3 or 5 or 7 or 8 or 10 or 12:
+    print(f"#{i+1}",end=" ")
+    if month in list1:
         if date>31:
             print("-1")
-    elif month == 2:
+        else:
+            print(f"{test[i][0:4]}/{test[i][4:6]}/{test[i][6:8]}")
+    elif month==2:
         if date>28:
             print("-1")
-    elif month == 4 or 6 or 9 or 11:
+        else:
+            print(f"{test[i][0:4]}/{test[i][4:6]}/{test[i][6:8]}")
+    elif month in list2:
         if date>30:
             print("-1")
+        else:
+            print(f"{test[i][0:4]}/{test[i][4:6]}/{test[i][6:8]}")   
     else:
-            print("-1")
-
-    print(f"{test[i][0:4]}/{test[i][4:6]}/{test[i][6:8]}")
+        print("-1")
