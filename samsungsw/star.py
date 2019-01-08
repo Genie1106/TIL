@@ -17,6 +17,7 @@ def maximun(n):
         score=score+dif
 
     print(high,score)
+    
 n=[[3, 5, 9], [1, 1, 4, 1, 2, 4]]
 
 maximun(n)
