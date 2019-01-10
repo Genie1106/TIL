@@ -1,26 +1,21 @@
-N,x=map(int,input().split())
+T=int(input())
+N=[]
+for i in range(T):
+    N.append(int(input()))
 
-test=[[1, 3, 3, 6, 7],[8, 13, 9, 12, 8],[4, 16, 11, 12, 6],[2, 4 ,1 ,23, 2],[9, 13, 4, 7, 3]]
+for i in N:
+    print(f"#{N.index(i)+1}",end=" ")
+    tri = [[1]*i for i in range(1,i+1)]
 
-
-# for i in range(N):
-#     test.append(list(map(int,input().split())))
-
-# death=0
-# for n in range(N-1):
-#     for m in range(N-1):
-#         fly=0
-#         for i in range(n,n+x):
-#             fly = fly + sum(test[i][m:m+x-1])
-#         if fly>death:
-#             death=fly
-# print(death)
-
-fly=0
-x=2
-for n in :
-    for m in range(N):
-        if m+x!=(N-1):
-            fly=sum(test[n][m:m+x])
-    
-print(fly)
+    for n in range(1,i):
+        for m in range(1,i):
+            if n<=m:
+                break
+            else:
+                tri[n][m]=tri[n-1][m-1]+tri[n-1][m]
+            
+    for a in range(i):
+        print()
+        for b in range(len(tri[a])):
+            print(tri[a][b],end=" ")
+    print(" ")
