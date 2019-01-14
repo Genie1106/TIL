@@ -23,8 +23,7 @@ else:
     print("no")
 
 for n in range(N):
-    
-    while array[n][]
+    while
 
 
 # for n in range(N):
