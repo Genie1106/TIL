@@ -1,0 +1,9 @@
+.font {
+    /* 1. font-size */
+    font-size: 40px;
+    font-weight: 300; /* bold */
+    font-family: 'Inconsolata', monospace;
+    line-height: 2;
+    letter-spacing: 4px;
+    text-align: center;
+}
