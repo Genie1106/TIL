@@ -1,0 +1,48 @@
+.underline {
+    border-color: #330066;
+    width: 70px;
+    border-width: 3px;
+}
+
+.card-title {
+    font-family: 'Jua', sans-serif;
+}
+
+.modal-title {
+    font-family: 'Gamja Flower', cursive;
+    font-weight: 700;
+}
+
+.tell{
+    font-family: 'Poor Story', cursive;
+}
+footer{
+    height: 50px;
+    background-color:#330066;
+    background-size:cover;
+}
+
+.arrow{
+    color: white;
+}
+
+.font {
+    font-size: 60px;
+    font-weight: 300; /* bold */
+    font-family: 'Nanum Pen Script', cursive;
+    line-height: 2;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.font2 {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2;
+
+}
+
+.font3{
+    font-family: 'Sunflower', sans-serif;
+}

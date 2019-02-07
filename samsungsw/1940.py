@@ -14,4 +14,4 @@ for t in range(T):
         if vel<0:
             vel=0
         distance+=vel
-    print(f"{t+1} {distance}")
+    print(f"#{t+1} {distance}")

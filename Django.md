@@ -134,3 +134,67 @@ urlpatterns = [
   ```
 
   
+
+## [20190128]
+
+#### [models.py]
+
+```django
+class Post(models.Model):
+	title = models.CharField(max_length=100)
+	content = models.TextField()
+```
+
+```django
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell	// django 전용 shell
+
+>>> from posts.models import Post
+>>> post = Post(title="Hello",content="world!")
+```
+
+#### [기본 기능]
+
+```django
+# 1. Create
+# post = Post(title="Hello", content="world!")
+# post.save()
+
+# 2. Read
+# 2.1 All
+# posts = Post.objects.all()
+# 2.2 Get one
+# post = Post.objectcs.get(pk=1) // django는 일반적으로 id 대신 pk를 사용
+# 2.3 filter(WHERE)
+# posts = Post.objects.filter(title="Hello").all()
+# post = Post.objects.filter(title="Hello").first()
+# 2.4 LIKE
+# posts = Post.objects.filter(title__contains="He").all()
+# 2.5 order_by
+# posts = Post.objects.order_by('title').all() #오름차순
+# posts = Post.objects.order_by('-title').all() #내림차순
+# 2.6 limit & offset
+# [offset:offset+limit]
+# posts = Post.objects.all()[1:2]
+
+# 3. Delete
+# post = Post.objects.get(pk=2)
+# post.delete()
+
+# 4. Update
+# post = Post.objects.get(pk=1)
+# post.title = "hi"
+# post.save()
+```
+
+```html
+post 요청 사용시 사용해야함!!
+1. html에 {% csrf_token %}
+2. views에 return redirect(f"/posts/{post.pk}")사용하여 어디로 돌려줄 것인지 적어줌.
++) from django.shortcuts import render, redirect 내장함수가 아니므로
+
+3. def github(request, username):
+   		return redirect(f"https://github.com/{username}")
+```
+
