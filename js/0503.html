@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ message }} - {{ count }}
+        <p v-if="checked">이건 보임.</p>
+        <li v-for="post in posts">
+            {{ post }}
+        </li>
+        <hr>
+        <li v-for="info in Object.keys(student)">
+            {{ info }} - {{ student[info] }}
+        </li>
+    </div>
+
+
+    <script>
+        
+        // Vue 인스턴스 생성. 어떤 element와 연계할지 알려줌
+        const app = new Vue({
+            // id="app"인 것과 동기화
+            el: '#app', // 어디에
+            data: { // 무엇을
+                message: "Hello, Vue!",
+                count: 0,
+                checked: true,
+                posts: ['첫 게시물','두번째 게시물','세번째!'],
+                student: {
+                    name: 'GENIE',
+                    univ: 'KNU',
+                },
+            },
+            methods: { // 어떻게
+                // this.message
+                plus: function(){
+                    this.count++
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
+
+
+<!-- MVC(MTV)
+M - Model (models.py)
+V - view (Template.html)
+C - Controller (views.py) -->
+
+<!-- MVVM
+M - Model
+V - View(HTML)
+VM - Veiw-Model(Vue) 
+V & VM : data binding -->
+
+<!-- <django>
+# 조건
+{% if post.is_public %}
+    {{ post }}
+{% end if %}
+
+# 반복
+{% for post in posts %}
+    {{ post }}
+{% endfor %}
+
+<Vue Directive>
+# 조건
+<p v-if="post.ispublic">
+    {{ post }}
+</p>
+
+# 반복
+<ul>
+    <li v-for="post in posts">
+        {{ post }}
+    </li>
+</ul> -->
