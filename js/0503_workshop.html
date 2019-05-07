@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'>
+        <input type="text" v-model='url'>
+        <a :href='url'>Go!</a>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                url: '',
+            },
+        })
+
+    const comics = null;
+    const bookShop = {
+        comics,
+        megazines
+        plus(){
+
+        }
+    }
+
+    const bookShop = {
+        comics: comics,
+        magazines: megazines,
+        plus: function(){
+
+        }
+    }
+
+    (function(){ console.log("나는 익명!")})()
+
+    </script>
+
+</body>
+</html>
